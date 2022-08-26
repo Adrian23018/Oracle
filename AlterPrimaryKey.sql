@@ -1,15 +1,15 @@
 --Create tabla REVIEW
 
 CREATE TABLE Review(
-id NUMBER ,
+id VARCHAR(25),
 updated_at DATE,
 create_at DATE,
-user_id   NUMBER,
-place_id NUMBER,
+user_id   VARCHAR(25),
+place_id VARCHAR(25),
 text VARCHAR(25)
 );
 
-DROP TABLE Review;
+DROP TABLE Usuario;
 
 --DROP TABLE Review;
 
@@ -18,7 +18,7 @@ DROP TABLE Review;
 --Create tabla USER
 
 CREATE TABLE Usuario(
-id NUMBER,
+id VARCHAR(25),
 updated_at DATE,
 create_at DATE,
 email VARCHAR(25),
@@ -27,16 +27,16 @@ firt_name VARCHAR(25),
 last_name VARCHAR(25)
 );
 
-DROP TABLE Usuario;
+DROP TABLE Amenity;
 
 
 CREATE TABLE Place(
-id NUMBER PRIMARY KEY NOT NULL,
+id VARCHAR(25),
 updated_at DATE,
 create_at DATE,
-user_id  NUMBER,
-name VARCHAR(25),
-city_id   NUMBER,
+user_id  VARCHAR(25),
+name_ VARCHAR(25),
+city_id   VARCHAR(25),
 descripcion VARCHAR(25),
 number_rooms INTEGER,
 number_bathrooms INTEGER,
@@ -48,7 +48,7 @@ longitude FLOAT
 
 
 CREATE TABLE Amenity(
-id NUMBER PRIMARY KEY NOT NULL,
+id VARCHAR(25),
 updated_at DATE,
 create_at DATE,
 name VARCHAR(25)
@@ -56,13 +56,13 @@ name VARCHAR(25)
 
 
 CREATE TABLE PlaceAmenity(
-amenity_id NUMBER PRIMARY KEY NOT NULL,
-place_id   NUMBER
+amenity_id VARCHAR(25),
+place_id   VARCHAR(25)
 );
 
 
 CREATE TABLE State(
-amenity_id NUMBER PRIMARY KEY NOT NULL,
+amenity_id VARCHAR(25),
 updated_at DATE,
 create_at DATE,
 name VARCHAR(25)
@@ -70,7 +70,7 @@ name VARCHAR(25)
 
 
 CREATE TABLE City(
-id NUMBER PRIMARY KEY NOT NULL,
+id VARCHAR(25),
 updated_at DATE,
 create_at DATE,
 state_id VARCHAR(25),
@@ -80,6 +80,3 @@ name VARCHAR(25)
 select * from CAT;
 
 DROP TABLE AMIGOS;
-
-
-
