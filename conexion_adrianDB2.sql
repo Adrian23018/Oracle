@@ -1,0 +1,21 @@
+ALTER TABLE Usuario ADD CONSTRAINT pk_Ususario_Id PRIMARY KEY (Id);
+
+
+ALTER TABLE Review
+ADD FOREIGN KEY (user_id) REFERENCES Usuario(Id);
+
+ALTER TABLE Review
+ADD FOREIGN KEY (place_id) REFERENCES Place(Id);
+
+ALTER TABLE Place
+ADD FOREIGN KEY (city_id) REFERENCES City(Id);
+
+ALTER TABLE PlaceAmenity
+ADD FOREIGN KEY (amenity_id) REFERENCES Amenity(Id);
+
+ALTER TABLE PlaceAmenity
+ADD FOREIGN KEY (place_id) REFERENCES Place(Id);
+
+ALTER TABLE City
+ADD FOREIGN KEY (state_id) REFERENCES State(state_id);
+
