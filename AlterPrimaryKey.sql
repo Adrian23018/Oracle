@@ -9,11 +9,6 @@ place_id VARCHAR(25),
 text VARCHAR(25)
 );
 
-DROP TABLE Usuario;
-
---DROP TABLE Review;
-
-
 
 --Create tabla USER
 
@@ -27,7 +22,7 @@ firt_name VARCHAR(25),
 last_name VARCHAR(25)
 );
 
-DROP TABLE Amenity;
+
 
 
 CREATE TABLE Place(
@@ -62,7 +57,7 @@ place_id   VARCHAR(25)
 
 
 CREATE TABLE State(
-amenity_id VARCHAR(25),
+id VARCHAR(25),
 updated_at DATE,
 create_at DATE,
 name VARCHAR(25)
@@ -79,4 +74,3 @@ name VARCHAR(25)
 
 select * from CAT;
 
-DROP TABLE AMIGOS;
